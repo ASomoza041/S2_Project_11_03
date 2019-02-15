@@ -13,17 +13,18 @@
    quotation tag in the Web page.
 
 */
-var randomQ = randomInt(0, 9);
-
+//The size variable sets how many quotes can be selcted.
+var size = 10;
+//sets the value of the variable called randomQ by creating the range of randomInt.
+var randomQ = randomInt(0, size);
+//This code takes the quote randomly slected and inputs it into the HTML doc.
+document.getElementById("quote").innerHTML = getQuote(randomQ);
+//This code genreates a random number between zero and nine.
 function randomInt(lowest, size) {
-    size = size + 1;
-    var interval = size - lowest;
-    var number = Math.floor(Math.random() * num);
+    return Math.floor(Math.random() * size);
+}
 
-    return number;
-};
 
-var quoteElem = document.getElementsByTagName("quote")
 
 
 function getQuote(n) {
